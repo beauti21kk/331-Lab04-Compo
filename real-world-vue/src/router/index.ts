@@ -102,7 +102,18 @@ const router = createRouter({
       name: 'network-error',
       component: NetworkErrorView
     }
-  ]
+  ],
+  // scrollBehavior() {
+  //  return { top: 0 }
+  // }
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    }
+    else {
+      return { top: 0 }
+    }
+  }
 })
 router.beforeEach(() => {
   NProgress.start()
