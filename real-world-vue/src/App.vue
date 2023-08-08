@@ -25,10 +25,6 @@ import HelloWorld from './components/HelloWorld.vue'
           <h4>{{ message }}</h4>
         </div>
       </nav>
-      <div class="size">
-        <label>  Size : </label>
-        <input class="sizes" type="number" v-model="sizes" />
-      </div>
         <RouterView :size="sizes"/>
       <!-- <h1>Events For Good</h1> --> 
     </div>
